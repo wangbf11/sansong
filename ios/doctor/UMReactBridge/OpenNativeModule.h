@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OpenNativeModule : NSObject<RCTBridgeModule, BUNativeAdsManagerDelegate>
+@interface OpenNativeModule : NSObject<RCTBridgeModule>
 
 @end
 
