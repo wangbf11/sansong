@@ -15,8 +15,6 @@ import {
     createBottomTabNavigator, StackActions
 } from 'react-navigation'
 
-import * as wechat from 'react-native-wechat'
-
 import image from "./assets/image"
 
 import LoginScreen from './screen/login/phone'
@@ -191,7 +189,7 @@ const RootRouter = createAppContainer(navigator)
 
 class Route extends PureComponent {
     componentDidMount() {
-        wechat.registerApp('wx6c9d879505173326')
+
     }
 
     render() {
