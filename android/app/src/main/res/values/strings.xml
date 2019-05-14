@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">三松医疗</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">RJyjf0N6kgd4fXYTqD4RNP1r9gLC4ksvOXqog</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentServer">http://47.244.126.174:3000/</string>
+</resources>
