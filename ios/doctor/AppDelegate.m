@@ -17,7 +17,7 @@
 #import <UMShare/UMShare.h>
 #import "RNUMConfigure.h"
 //启动白屏
-#import "RNSplashScreen.h"
+//#import "RNSplashScreen.h"
 
 @implementation AppDelegate
 
@@ -46,7 +46,7 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   //启动白屏
-  [RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
+  //[RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
   [self.window makeKeyAndVisible];
   return YES;
 }
