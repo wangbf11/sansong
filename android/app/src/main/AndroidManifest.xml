@@ -63,10 +63,24 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/lg_file_path"/>
+        </provider>
+
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="5bdfeb20b465f5a1ed0001ad" >
         </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="umeng" />
     </application>
 
 </manifest>

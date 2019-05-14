@@ -13,13 +13,12 @@ import com.github.yamill.orientation.OrientationPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.microsoft.codepush.react.CodePush;
-import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
-import com.theweflex.react.WeChatPackage;
-import com.umeng.commonsdk.UMConfigure;
-import com.umeng.socialize.PlatformConfig;
 import com.sansong.doctor.RecyclerView.RNRecyclerviewListPackage;
 import com.sansong.doctor.smartrefreshlayout.SmartRefreshLayoutPackage;
 import com.sansong.doctor.utils.GlideUtils;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.umeng.commonsdk.UMConfigure;
+import com.umeng.socialize.PlatformConfig;
 
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
@@ -50,7 +49,6 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
             new SmartRefreshLayoutPackage(),
             new RNRecyclerviewListPackage(),
             new SplashScreenReactPackage(),
-            new WeChatPackage(),
             new RNDeviceInfo(),
             new LinearGradientPackage(),
             new OrientationPackage(),
@@ -81,7 +79,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
      * 友盟初始化
      */
     private void initUmeng() {
-        RNUMConfigure.init(this, "5bdfeb20b465f5a1ed0001ad", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");  // 友盟初始化
+        RNUMConfigure.init(this, "5bdfeb20b465f5a1ed0001ad", null, UMConfigure.DEVICE_TYPE_PHONE, "");  // 友盟初始化
     }
 
     {
