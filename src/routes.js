@@ -193,7 +193,7 @@ class Route extends PureComponent {
     }
 
     render() {
-        return
+        return (
             <View style={{ flex: 1 }}>
                 <StatusBar
                     barStyle={this.props.barStyle || 'dark-content'}
@@ -204,6 +204,7 @@ class Route extends PureComponent {
                 <Loading ref={(e) => { e && (global.Loading = e) }} />
                 <BackTwiceExitApp />
             </View>
+        );
     }
 }
 let codePushOptions = {
