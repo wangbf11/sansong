@@ -193,8 +193,7 @@ class Route extends PureComponent {
     }
 
     render() {
-        return Platform.OS == "ios" ?
-            <RootRouter /> :
+        return
             <View style={{ flex: 1 }}>
                 <StatusBar
                     barStyle={this.props.barStyle || 'dark-content'}
