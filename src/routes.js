@@ -32,6 +32,8 @@ import Toast from './components/Toast'
 import Loading from './components/Loading'
 import NavigationService from './components/NavigationService';
 import CodePush from 'react-native-code-push'
+import * as IMClient from "rongcloud-react-native-imlib";
+
 const setIcon = function ({ ...set }) {
     return (
         <Image
@@ -189,7 +191,24 @@ const RootRouter = createAppContainer(navigator)
 
 class Route extends PureComponent {
     componentDidMount() {
+        IMClient.init("x18ywvqfxcn2c")
+        IMClient.connect("Mp1SlOClkC5imMrnO5xIsAoSTn8t701T7AbwThntqeIQasCHd35DQRg6FtTrjEPC/GN4Ijv1uf2D3sMjvYRkgQ==",
+            onSuccess,
+            onError,
+            onTokenIncorrect
+        );
+    }
 
+    onSuccess = (userId) => {
+        console.log("连接成功：" + userId);
+    }
+
+    onError = (userId) => {
+        console.log("连接成功：" + userId);
+    }
+
+    onTokenIncorrect = (userId) => {
+        console.log("连接成功：" + userId);
     }
 
     render() {
