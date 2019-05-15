@@ -34,6 +34,25 @@ import NavigationService from './components/NavigationService';
 import CodePush from 'react-native-code-push'
 import * as IMClient from "rongcloud-react-native-imlib";
 
+function onSuccess(userId) {
+    console.log("连接成功：" + userId);
+    alert("连接成功")
+}
+
+function onError(errorCode) {
+    console.log("连接失败：" + errorCode);
+    alert("连接失败")
+}
+
+function onTokenIncorrect() {
+    console.log("Token 不正确或已过期");
+    alert("Token 不正确或已过期")
+}
+
+IMClient.init("x18ywvqfxci8c")
+IMClient.connect("Mp1SlOClkC5imMrnO5xIsAoSTn8t701T7AbwThntqeIQasCHd35DQRg6FtTrjEPC/GN4Ijv1uf2D3sMjvYRkgQ=="
+,onSuccess,onError,onTokenIncorrect);
+
 const setIcon = function ({ ...set }) {
     return (
         <Image
@@ -191,23 +210,7 @@ const RootRouter = createAppContainer(navigator)
 
 class Route extends PureComponent {
     componentDidMount() {
-        IMClient.init("x18ywvqfxci8c")
-        IMClient.connect("Mp1SlOClkC5imMrnO5xIsAoSTn8t701T7AbwThntqeIQasCHd35DQRg6FtTrjEPC/GN4Ijv1uf2D3sMjvYRkgQ==");
-    }
 
-    onSuccess = (userId) => {
-        console.log("连接成功：" + userId);
-        alert("连接成功：")
-    }
-
-    onError = (userId) => {
-        console.log("连接失败：" + userId);
-        alert("连接失败：")
-    }
-
-    onTokenIncorrect = (userId) => {
-        console.log("token错误：" + userId);
-        alert("token错误：")
     }
 
     render() {
