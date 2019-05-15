@@ -49,7 +49,7 @@ function onTokenIncorrect() {
     alert("Token 不正确或已过期")
 }
 
-IMClient.init("x18ywvqfxci8c")
+IMClient.init("x18ywvqfxcn2c")
 IMClient.connect("Mp1SlOClkC5imMrnO5xIsAoSTn8t701T7AbwThntqeIQasCHd35DQRg6FtTrjEPC/GN4Ijv1uf2D3sMjvYRkgQ=="
 ,onSuccess,onError,onTokenIncorrect);
 
