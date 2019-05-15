@@ -204,11 +204,11 @@ class Route extends PureComponent {
     }
 
     onError = (userId) => {
-        console.log("连接成功：" + userId);
+        console.log("连接失败：" + userId);
     }
 
     onTokenIncorrect = (userId) => {
-        console.log("连接成功：" + userId);
+        console.log("token错误：" + userId);
     }
 
     render() {
