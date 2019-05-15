@@ -30,6 +30,7 @@ class MyMessageScreen extends PureComponent {
             conversationTypes.split(",").map(i => parseInt(i))
         );
         console.log(conversations);
+        alert(JSON.stringify(conversations))
         this.setState({ conversations });
     };
 
