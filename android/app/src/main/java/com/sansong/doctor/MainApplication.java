@@ -5,6 +5,7 @@ import android.support.multidex.MultiDexApplication;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.bumptech.glide.Glide;
 import com.facebook.react.ReactApplication;
+import cn.rongcloud.imlib.react.RCIMLibPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -43,6 +44,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RCIMLibPackage(),
             new ImagePickerPackage(),
               new CodePush(getResources().getString(R.string.reactNativeCodePush_androidDeploymentKey),
                       getApplicationContext(), BuildConfig.DEBUG,getResources().getString(R.string.reactNativeCodePush_androidDeploymentServer)),
